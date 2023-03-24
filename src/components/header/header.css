@@ -1,0 +1,93 @@
+.header {
+    padding: 40px 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+
+    /* высота шапки (поменять при адаптиве) */
+    height: 100px;
+
+}
+
+.header__outer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__column {
+    display: flex;
+}
+
+.header__image img {
+    content: url("./images/logo.png");
+}
+
+.header__togler {
+    border-radius: 50%;
+    margin-right: 40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+    align-items: center;
+}
+
+.header__input {
+    padding: 10px 30px;
+    border-radius: 4px;
+    margin-right: 40px;
+    background: linear-gradient(45deg, #f5f7fa, #c3cfe2);
+    color: black;
+    border: 1px solid #9890e3;
+    outline: none;
+}
+.header__input::placeholder {
+    color: black;
+}
+
+.header__input:focus {
+    border: 1px solid #9890e3;
+    outline: none;
+}
+
+.header__btn {
+    cursor: pointer;
+    background: linear-gradient(45deg, #f5f7fa, #c3cfe2);
+    border: 1px solid #9890e3;
+    padding: 10px 30px;
+    border-radius: 4px;
+}
+
+.header__metrics {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(317.63deg,#353589 -7.42%,#9a9aff 120.45%);
+    color: white;
+    border: 1px solid white;
+}
+
+.header__togler-theme-switch {
+    content: url("./images/moon.png");
+}
+
+/*
+    Функционал смены темы
+*/
+
+.header.dark {
+    background: #222;
+    border-bottom: 1px solid white;
+}
+
+.header.dark .header__image img {
+    content: url("./images/logo_dark.png");
+}
+
+.header.dark .header__togler-theme-switch {
+    content: url("./images/sun.png");
+}
