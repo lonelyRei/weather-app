@@ -1,13 +1,13 @@
 import { FC } from 'react'
 import { CityNotExists } from './cityNotExists/CityNotExists'
 import './currentWeather.css'
-import { useCurrentWeatherStore } from '../../stores/weatherGeneration'
+import { useCurrentWeatherStore } from '../../stores/currentWeatherStore'
 import { Spin } from 'antd'
 import { CurrentWeatherDisplay } from './currentWeatherDisplay/CurrentWeatherDisplay'
 import { CustomError } from '../UI/customError/CustomError'
 import { CityInput } from '../cityInput/CityInput'
 
-const errorText = 'Не удалось получить данные о населенном пункте, попробуйте ввести данные снова.'
+const errorText: string = 'Не удалось получить данные о населенном пункте, попробуйте ввести данные снова.'
 export const CurrentWeather: FC = () => {
     const isLoading = useCurrentWeatherStore((state) => state.isLoading)
     const isError = useCurrentWeatherStore((state) => state.isError)

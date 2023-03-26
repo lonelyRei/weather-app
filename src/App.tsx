@@ -4,7 +4,10 @@ import './weatherIcons/css/owfont-regular.css'
 import { StartPage } from './components/startPage/StartPage'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import useAppStore, { appThemes } from './stores/appStore'
+import { DetailWeather } from './components/detailWeather/DetailWeather'
 
+// ToDo: Доработать механизм выбора темной темы
+// Можно менять только у компонента app, а у остальных просто проверять в стилях (css)
 const App: FC = () => {
     const theme = useAppStore((state) => state.theme)
     const queryClient = new QueryClient({})
@@ -16,7 +19,7 @@ const App: FC = () => {
                         <StartPage />
                     </div>
                     <div className="app__row">
-                        <div>Остальное</div>
+                        <DetailWeather />
                     </div>
                 </div>
             </div>

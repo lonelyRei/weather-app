@@ -82,7 +82,7 @@ export interface ICurrentWeatherResponse {
 }
 
 // Элемент списка прогноза погоды на пять дней
-interface IFiveDaysListElement {
+export interface IFiveDaysListElement {
     // Время в милисеккундах
     dt: number
 
@@ -111,6 +111,9 @@ export interface IFiveDaysResponse {
 
         // Закат в миллисекундах
         sunset: number
+
+        // Страна
+        country: string
     }
 
     // Список элементов прогноза с расстоянием в 3 часа между друг другом

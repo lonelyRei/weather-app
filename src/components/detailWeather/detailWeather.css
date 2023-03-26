@@ -1,0 +1,13 @@
+.detail-display {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 30px;
+}
+
+.detail-display-info {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}

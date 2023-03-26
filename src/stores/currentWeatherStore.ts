@@ -10,18 +10,18 @@ interface ICurrentWeather {
     setData: (data: ICurrentWeatherResponse) => void
 }
 
-export const useCurrentWeatherStore = create<ICurrentWeather>((set, get) => ({
+export const useCurrentWeatherStore = create<ICurrentWeather>((set) => ({
     isLoading: false,
     isError: false,
     data: undefined,
     setIsLoading: () => {
-        return set((state) => ({
+        return set(() => ({
             isLoading: true,
             isError: false,
         }))
     },
     setIsError: () => {
-        return set((state) => ({
+        return set(() => ({
             isError: true,
             isLoading: false,
         }))

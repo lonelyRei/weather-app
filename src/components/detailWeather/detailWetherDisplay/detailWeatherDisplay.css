@@ -1,0 +1,38 @@
+.detail-weather__display-outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-weather__display-list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+.arrow {
+    margin: 20px 8px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.arrow polygon {
+    fill: #353589;
+    transition: fill 0.5s ease-out;
+}
+.arrow-left {
+    transform: rotate(180deg);
+}
+.arrow:hover polygon {
+    fill: #7668e5;
+}
+
+.app-dark .arrow polygon {
+    fill: white;
+}
+
+.app-dark .arrow:hover polygon {
+    fill: #7668e5;
+}

@@ -1,0 +1,72 @@
+.date-toggler {
+    height: 50px;
+    align-self: flex-start;
+    width: 100%;
+}
+
+.date-toggler__outer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.date-toggler__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-toggler__btn {
+    font-family: 'Source Sans', sans-serif;
+    font-size: 24px;
+    line-height: 125%;
+    color: rgb(147, 147, 147);
+    cursor: pointer;
+    display: block;
+}
+
+.date-toggler__btn.active {
+    color: #353589;
+    position: relative;
+}
+
+.date-toggler__btn.active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: calc(50% - 13px);
+    bottom: -4px;
+    width: 26px;
+    background: #353589;
+    height: 4px;
+    border-radius: 25%;
+}
+
+.date-toggler__btn:first-child {
+    margin-right: 30px;
+}
+
+.app-dark .date-toggler__btn.active {
+    color: #7668e5;
+}
+
+.app-dark .date-toggler__btn.active::before {
+    background: #7668e5;
+}
+
+.app-dark .date-toggler__btn {
+    color: white;
+}
+
+.app-dark .date-toggler__btn:hover {
+    color: #7668e5;
+}
+
+.ant-radio-wrapper span:nth-child(2) {
+    font-family: "Source Sans", sans-serif;
+    font-size: 18px;
+}
+
+.app-dark .ant-radio-wrapper span:nth-child(2) {
+    color: white;
+}

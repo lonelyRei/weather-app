@@ -4,6 +4,7 @@
     top: 0;
     width: 100%;
     background: white;
+    z-index: 2;
 
     /* высота шапки (поменять при адаптиве) */
     height: 100px;

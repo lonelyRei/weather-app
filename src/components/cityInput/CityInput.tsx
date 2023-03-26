@@ -1,30 +1,47 @@
 import React, { FC, useState } from 'react'
-import { useCurrentWeatherStore } from '../../stores/weatherGeneration'
+import { useCurrentWeatherStore } from '../../stores/currentWeatherStore'
 import { useMutation } from 'react-query'
 import WeatherAPI from '../../API/weatherAPI'
+import useFiveDaysWeatherStore from '../../stores/fiveDaysWeatherStore'
 
 export const CityInput: FC = () => {
     const [city, setCity] = useState<string>('')
 
-    const setIsLoading = useCurrentWeatherStore((state) => state.setIsLoading)
-    const setIsError = useCurrentWeatherStore((state) => state.setIsError)
-    const setData = useCurrentWeatherStore((state) => state.setData)
+    const setCurrentIsLoading = useCurrentWeatherStore((state) => state.setIsLoading)
+    const setCurrentIsError = useCurrentWeatherStore((state) => state.setIsError)
+    const setCurrentData = useCurrentWeatherStore((state) => state.setData)
 
-    const fetchingCurrentWeather = useMutation(
-        (input: string) => {
-            setIsLoading()
-            return WeatherAPI.getCurrentWeather(input)
+    const setFiveDaysIsLoading = useFiveDaysWeatherStore((state) => state.setIsLoading)
+    const setFiveDaysIsError = useFiveDaysWeatherStore((state) => state.setIsError)
+    const setFiveDaysData = useFiveDaysWeatherStore((state) => state.setData)
+
+    const fetchCurrentWeather = useMutation(
+        (city: string) => {
+            setCurrentIsLoading()
+            return WeatherAPI.getCurrentWeather(city)
         },
         {
-            onError: setIsError,
-            onSuccess: setData,
+            onError: setCurrentIsError,
+            onSuccess: setCurrentData,
+        }
+    )
+
+    const fetchFiveDaysWeather = useMutation(
+        (city: string) => {
+            setFiveDaysIsLoading()
+            return WeatherAPI.getFiveDaysWeather(city)
+        },
+        {
+            onError: setFiveDaysIsError,
+            onSuccess: setFiveDaysData,
         }
     )
 
     const HandleSearchWeather = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault()
         if (city) {
-            fetchingCurrentWeather.mutate(city)
+            fetchCurrentWeather.mutate(city)
+            fetchFiveDaysWeather.mutate(city)
         }
         setCity('')
     }

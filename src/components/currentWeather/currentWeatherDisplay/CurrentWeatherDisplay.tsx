@@ -2,11 +2,12 @@ import { FC } from 'react'
 import { ICurrentWeatherResponse } from '../../../API/types'
 import './currentWeatherDisplay.css'
 import useAppStore, { appMetrics } from '../../../stores/appStore'
+import { getCelsius, getCorrectPressure } from '../../../common/common'
 
 // todo: Сделать темную тему
 export const CurrentWeatherDisplay: FC<ICurrentWeatherDisplayProps> = ({ data }) => {
     const metrics = useAppStore((state) => state.metrics)
-    const theme = useAppStore((state) => state.theme)
+    // const theme = useAppStore((state) => state.theme)
     const date = new Date(data.dt * 1000)
     return (
         <div className="current-display">
@@ -33,7 +34,7 @@ export const CurrentWeatherDisplay: FC<ICurrentWeatherDisplayProps> = ({ data })
                         <div className="current-display__description-element">
                             <span className="current-display__description-image" id="current-display-pressure"></span>
                             <span className="current-display__description-text">
-                                Давление {Math.round(data.main.pressure / 1.333)} мм. рт. ст.
+                                Давление {getCorrectPressure(data.main.pressure)} мм. рт. ст.
                             </span>
                         </div>
                     </div>
@@ -67,13 +68,13 @@ export const CurrentWeatherDisplay: FC<ICurrentWeatherDisplayProps> = ({ data })
                         <span className="current-display__card__text">
                             Температура:{' '}
                             {metrics === appMetrics.celsius
-                                ? Math.round(data.main.temp - 273.15) + ' °C'
+                                ? getCelsius(data.main.temp) + ' °C'
                                 : data.main.temp + ' °F'}
                         </span>
                         <span className="current-display__card__text">
                             По ощущениям:{' '}
                             {metrics === appMetrics.celsius
-                                ? Math.round(data.main.feels_like - 273.15) + ' °C'
+                                ? getCelsius(data.main.feels_like) + ' °C'
                                 : data.main.feels_like + ' °F'}
                         </span>
                     </div>
