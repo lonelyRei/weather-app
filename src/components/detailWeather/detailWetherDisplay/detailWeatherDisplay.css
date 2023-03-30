@@ -36,3 +36,30 @@
 .app-dark .arrow:hover polygon {
     fill: #7668e5;
 }
+
+@media screen and (max-width: 1200px) {
+    .detail-weather__display-outer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .detail-weather__display-list {
+        flex-direction: column;
+    }
+
+    .arrow-left {
+        transform: rotate(270deg);
+    }
+
+    .arrow-right {
+        transform: rotate(90deg);
+    }
+}
+@media screen and (max-width: 768px) {
+    .arrow {
+        width: 20px;
+        height: 20px;
+        margin: 20px 0;
+    }
+}

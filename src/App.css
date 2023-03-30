@@ -57,4 +57,26 @@
     max-width: 1600px;
     padding: 0 50px;
     margin: 0 auto;
+    position: relative;
+}
+
+/* Адаптив */
+
+@media screen and (max-width: 1200px) {
+    .app__row:first-child {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 320px) {
+
 }

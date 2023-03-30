@@ -24,12 +24,15 @@ export const Header: FC = () => {
                         </a>
                     </div>
                     <div className="header__column">
-                        <span className="header__togler header__metrics" onClick={switchMetrics}>
-                            {metrics === appMetrics.celsius ? '°C' : '°F'}
-                        </span>
-                        <span className="header__togler" onClick={switchTheme}>
-                            <img src="" alt="" className="header__togler-theme-switch" />
-                        </span>
+                        <div className="header__actions">
+                            <span className="header__togler header__metrics" onClick={switchMetrics}>
+                                {metrics === appMetrics.celsius ? '°C' : '°F'}
+                            </span>
+                            <span className="header__togler" onClick={switchTheme}>
+                                <img src="" alt="" className="header__togler-theme-switch" />
+                            </span>
+                        </div>
+
                         <CityInput />
                     </div>
                 </div>

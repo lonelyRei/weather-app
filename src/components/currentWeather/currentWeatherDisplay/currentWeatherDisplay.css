@@ -3,6 +3,7 @@
     height: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 55px;
 }
 
@@ -114,6 +115,7 @@
     border-radius: 15%;
     color: white;
     font-family: 'Source Sans', sans-serif;
+    padding: 30px 0;
 }
 
 .current-display__card__info {
@@ -139,4 +141,98 @@ i::before {
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .current-display__description {
+        width: 100%;
+    }
+    .current-display__description-text {
+        font-size: 12px;
+    }
+    .current-display__date-info {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .current-display__description-row {
+        flex-direction: column;
+    }
+    .current-display__description-element {
+        margin-bottom: 15px;
+    }
+    .current-display__description-element:last-child {
+        margin-bottom: 0;
+    }
+    .current-display__card {
+        width: 70%;
+    }
+    .current-display__title {
+        font-size: 75px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .current-display__title {
+        font-size: 50px;
+    }
+    .current-display {
+        padding: 0;
+    }
+    .current-display__date {
+        flex-direction: column;
+    }
+    .current-display__card__text {
+        font-size: 14px;
+    }
+    .current-display i::before {
+        font-size: 1em;
+    }
+    .current-display__card  {
+        width: 100%;
+    }
+    .current-display__column:last-child {
+        align-self: flex-end;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .current-display__card__today {
+        font-size: 10px;
+    }
+    .current-display__column:last-child {
+        width: 40%;
+    }
+    .current-display__column:nth-child(1) {
+        width: 60%;
+    }
+    .current-display__card__text {
+        font-size: 10px;
+    }
+    .current-display__description-image {
+        width: 25px;
+        height: 25px;
+    }
+    .current-display__description {
+        padding: 15px 5px;
+    }
+    .current-display__description-text {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .current-display__card__today {
+        font-size: 10px;
+        margin-top: 0;
+        padding: 0;
+        background: transparent;
+    }
+    .current-display__card {
+        padding: 15px 0;
+    }
+    .current-display__column {
+        padding: 10px;
+    }
 }

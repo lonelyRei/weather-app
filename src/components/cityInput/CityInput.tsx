@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react'
 import { useFetchingCurrentWeather, useFetchingFiveDaysWeather } from '../../hooks/weatherFetching'
+import './cityInput.css'
 
 export const CityInput: FC = () => {
     const [city, setCity] = useState<string>('')
@@ -16,15 +17,15 @@ export const CityInput: FC = () => {
         setCity('')
     }
     return (
-        <div>
+        <div className="input-area">
             <input
                 placeholder="Введите город..."
-                className="header__input"
+                className="city__input"
                 type="text"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
             />
-            <button className="header__btn" onClick={HandleSearchWeather}>
+            <button className="city__btn" onClick={HandleSearchWeather}>
                 Узнать погоду
             </button>
         </div>

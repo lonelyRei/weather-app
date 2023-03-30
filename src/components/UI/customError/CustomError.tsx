@@ -1,7 +1,7 @@
 import { FC, ReactNode, useState } from 'react'
 import './customError.css'
 
-// todo: Сделать отключение скрола
+// todo: Сделать отключение скрола и адаптив
 export const CustomError: FC<ICustomError> = ({ errorText, children }) => {
     const [isVisible, setIsVisible] = useState<boolean>(true)
     return (

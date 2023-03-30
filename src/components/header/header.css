@@ -36,30 +36,8 @@
     align-items: center;
 }
 
-.header__input {
-    padding: 10px 30px;
-    border-radius: 4px;
-    margin-right: 40px;
-    background: linear-gradient(45deg, #f5f7fa, #c3cfe2);
-    color: black;
-    border: 1px solid #9890e3;
-    outline: none;
-}
-.header__input::placeholder {
-    color: black;
-}
-
-.header__input:focus {
-    border: 1px solid #9890e3;
-    outline: none;
-}
-
-.header__btn {
-    cursor: pointer;
-    background: linear-gradient(45deg, #f5f7fa, #c3cfe2);
-    border: 1px solid #9890e3;
-    padding: 10px 30px;
-    border-radius: 4px;
+.header__actions {
+    display: flex;
 }
 
 .header__metrics {
@@ -91,4 +69,57 @@
 
 .app-dark .header__togler-theme-switch {
     content: url("./images/sun.png");
+}
+
+
+@media screen and (max-width: 1200px) {
+    .header {
+        padding: 40px 20px;
+    }
+    .header .city__btn {
+        padding: 10px;
+    }
+
+    .header .city__input {
+        padding: 10px;
+        margin-right: 15px;
+    }
+
+    .header__togler {
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 10px 0;
+        height: 130px;
+    }
+    .header__outer {
+        flex-direction: column;
+    }
+    .header__column:first-child {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header__column:nth-child(2) {
+        flex-direction: column;
+    }
+    .header__actions {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .header {
+        height: 170px;
+    }
+    .header__togler:nth-child(2) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
 }

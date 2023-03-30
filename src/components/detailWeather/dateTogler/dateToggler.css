@@ -70,3 +70,23 @@
 .app-dark .ant-radio-wrapper span:nth-child(2) {
     color: white;
 }
+
+@media screen and (max-width: 768px) {
+    .date-toggler {
+        margin-bottom: 40px;
+    }
+    .date-toggler__item:first-child {
+        margin-bottom: 15px;
+    }
+    .date-toggler__outer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ant-radio-wrapper span:nth-child(2) {
+        font-size: 12px;
+    }
+}

@@ -19,3 +19,15 @@
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 768px) {
+    .current-weather {
+        padding-top: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .current-weather {
+        padding-top: 180px;
+    }
+}

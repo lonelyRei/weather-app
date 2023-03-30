@@ -19,6 +19,7 @@ export const Footer: FC = () => {
                     <div className="footer__column">
                         <div className="footer__links">
                             <a
+                                rel="noreferrer"
                                 id="vk-image"
                                 target={'_blank'}
                                 href="https://vk.com/empty_rei"
@@ -27,6 +28,7 @@ export const Footer: FC = () => {
                                 <img src="" alt="" />
                             </a>
                             <a
+                                rel="noreferrer"
                                 id="tg-image"
                                 target={'_blank'}
                                 href="https://t.me/PortyAf"
@@ -35,6 +37,7 @@ export const Footer: FC = () => {
                                 <img src="" alt="" />
                             </a>
                             <a
+                                rel="noreferrer"
                                 id="github-image"
                                 target={'_blank'}
                                 href="https://github.com/lonelyRei"

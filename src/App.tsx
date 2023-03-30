@@ -23,6 +23,8 @@ const App: FC = () => {
             fetchCurrentWeather.mutate(recentlyWatchedCities[0].name)
             fetchFiveDaysWeather.mutate(recentlyWatchedCities[0].name)
         }
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (

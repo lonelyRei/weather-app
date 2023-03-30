@@ -10,6 +10,8 @@ const SampleNextArrow = (props: any) => {
                 color: 'black',
                 fontSize: '15px',
                 lineHeight: '1.5715',
+                right: '15px',
+                zIndex: '2',
             }}
             onClick={onClick}
         >
@@ -28,6 +30,8 @@ const SamplePrevArrow = (props: any) => {
                 color: 'black',
                 fontSize: '15px',
                 lineHeight: '1.5715',
+                left: '15px',
+                zIndex: '2',
             }}
             onClick={onClick}
         >

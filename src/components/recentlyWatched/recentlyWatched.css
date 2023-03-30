@@ -38,6 +38,14 @@
     content: '';
 }
 
+.recently-watched .slick-prev {
+    left: 15px !important;
+}
+
+.recently-watched .slick-nex{
+    right: 15px !important;
+}
+
 .recently-watched .slick-arrow {
     color: #353589 !important;
     font-size: 30px !important;

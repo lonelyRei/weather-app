@@ -19,3 +19,15 @@
 .app-dark .detail-display .city-not-exists__text {
     color: white;
 }
+
+@media screen and (max-width: 480px) {
+    .detail-display {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 768px)  {
+    .city-not-exists__text {
+        font-size: 14px;
+    }
+}
