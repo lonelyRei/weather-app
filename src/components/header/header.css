@@ -80,15 +80,15 @@
     Функционал смены темы
 */
 
-.header.dark {
+.app-dark .header {
     background: #222;
     border-bottom: 1px solid white;
 }
 
-.header.dark .header__image img {
+.app-dark .header__image img {
     content: url("./images/logo_dark.png");
 }
 
-.header.dark .header__togler-theme-switch {
+.app-dark .header__togler-theme-switch {
     content: url("./images/sun.png");
 }

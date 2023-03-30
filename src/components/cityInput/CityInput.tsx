@@ -1,41 +1,11 @@
 import React, { FC, useState } from 'react'
-import { useCurrentWeatherStore } from '../../stores/currentWeatherStore'
-import { useMutation } from 'react-query'
-import WeatherAPI from '../../API/weatherAPI'
-import useFiveDaysWeatherStore from '../../stores/fiveDaysWeatherStore'
+import { useFetchingCurrentWeather, useFetchingFiveDaysWeather } from '../../hooks/weatherFetching'
 
 export const CityInput: FC = () => {
     const [city, setCity] = useState<string>('')
 
-    const setCurrentIsLoading = useCurrentWeatherStore((state) => state.setIsLoading)
-    const setCurrentIsError = useCurrentWeatherStore((state) => state.setIsError)
-    const setCurrentData = useCurrentWeatherStore((state) => state.setData)
-
-    const setFiveDaysIsLoading = useFiveDaysWeatherStore((state) => state.setIsLoading)
-    const setFiveDaysIsError = useFiveDaysWeatherStore((state) => state.setIsError)
-    const setFiveDaysData = useFiveDaysWeatherStore((state) => state.setData)
-
-    const fetchCurrentWeather = useMutation(
-        (city: string) => {
-            setCurrentIsLoading()
-            return WeatherAPI.getCurrentWeather(city)
-        },
-        {
-            onError: setCurrentIsError,
-            onSuccess: setCurrentData,
-        }
-    )
-
-    const fetchFiveDaysWeather = useMutation(
-        (city: string) => {
-            setFiveDaysIsLoading()
-            return WeatherAPI.getFiveDaysWeather(city)
-        },
-        {
-            onError: setFiveDaysIsError,
-            onSuccess: setFiveDaysData,
-        }
-    )
+    const fetchCurrentWeather = useFetchingCurrentWeather()
+    const fetchFiveDaysWeather = useFetchingFiveDaysWeather()
 
     const HandleSearchWeather = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault()

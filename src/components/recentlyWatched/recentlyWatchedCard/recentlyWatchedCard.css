@@ -1,0 +1,59 @@
+.recently-card {
+    cursor: pointer;
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f7f8fa;
+    border-radius: 30px;
+    max-width: 60%;
+    margin: 0 auto;
+
+    font-family: "Source Sans", sans-serif;
+}
+
+.recently-card__date,
+.recently-card__time {
+    padding: 5px 15px;
+    border-radius: 40px;
+    color: white;
+    font-family: "Source Sans", sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.recently-card__description::first-letter {
+    text-transform: uppercase;
+}
+
+.recently-card__date {
+    background: #353589;
+}
+
+.recently-card__time {
+    background: #7668e5;
+}
+
+.recently-card i::before {
+    color: #353589;
+}
+
+.recently-card__text {
+    color: #666;
+    font-size: 20px;
+    font-family: "Source Sans", sans-serif;
+    margin-bottom: 15px;
+}
+
+.app-dark .recently-card{
+    background: rgb(18, 28, 50);
+}
+
+.app-dark .recently-card__text {
+    color: white;
+}
+
+.app-dark .recently-card i::before {
+    color: white;
+}

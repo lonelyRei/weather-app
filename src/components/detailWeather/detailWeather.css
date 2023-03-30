@@ -11,3 +11,11 @@
     width: 100%;
     flex-direction: column;
 }
+
+.detail-display .city-not-exists__text {
+    color: #353589;
+}
+
+.app-dark .detail-display .city-not-exists__text {
+    color: white;
+}

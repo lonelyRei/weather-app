@@ -2,16 +2,15 @@ import React, { FC } from 'react'
 import './images/logo.png'
 import './header.css'
 import { CityInput } from '../cityInput/CityInput'
-import useAppStore, { appMetrics, appThemes } from '../../stores/appStore'
+import useAppStore, { appMetrics } from '../../stores/appStore'
 
 export const Header: FC = () => {
     const switchTheme = useAppStore((state) => state.switchTheme)
     const switchMetrics = useAppStore((state) => state.switchMetrics)
-    const theme = useAppStore((state) => state.theme)
     const metrics = useAppStore((state) => state.metrics)
 
     return (
-        <header className={'header' + (theme === appThemes.dark ? ' dark' : '')}>
+        <header className="header">
             <div className="container">
                 <div className="header__outer">
                     <div className="header__column">

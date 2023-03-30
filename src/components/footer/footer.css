@@ -1,0 +1,58 @@
+.footer {
+    padding: 30px 0;
+}
+
+.footer__outer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__image img {
+    content: url("../header/images/logo.png");
+}
+
+.footer__links {
+    display: flex;
+    align-items: center;
+}
+
+.footer__links-item {
+    margin-right: 20px;
+}
+
+.footer__links-item:last-child {
+    margin-right: 0;
+}
+
+.footer__links a {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.footer__links a img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.footer #vk-image img {
+    content: url("./images/vk.png");
+}
+
+.footer #tg-image img {
+    content: url("./images/tg.png");
+}
+
+.footer #github-image img {
+    content: url("./images/github.png");
+}
+
+
+.app-dark .footer {
+    border-top: 1px solid white;
+}
+
+.app-dark .footer__image img{
+    content: url("../header/images/logo_dark.png");
+}

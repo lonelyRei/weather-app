@@ -1,0 +1,48 @@
+.recently-watched {
+    margin-bottom: 40px;
+}
+
+.recently-watched__title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 44px;
+    line-height: 125%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    color: #353589;
+}
+
+.app-dark .recently-watched__title {
+    color: white;
+}
+
+.recently-watched .slick-dots li button {
+    background: #9a9aff;
+    opacity: 1;
+}
+
+.recently-watched .slick-dots li.slick-active button{
+    background: #353589;
+    opacity: 1;
+}
+
+.app-dark .recently-watched .slick-dots li button {
+    background: white;
+}
+
+.app-dark .recently-watched .slick-dots li.slick-active button{
+    background: #353589;
+}
+
+.recently-watched .ant-carousel .slick-next::before, .recently-watched .ant-carousel .slick-prev::before {
+    content: '';
+}
+
+.recently-watched .slick-arrow {
+    color: #353589 !important;
+    font-size: 30px !important;
+}
+
+.app-dark .recently-watched .slick-arrow {
+    color: white !important;
+}

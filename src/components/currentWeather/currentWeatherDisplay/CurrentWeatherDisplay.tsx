@@ -7,7 +7,6 @@ import { getCelsius, getCorrectPressure } from '../../../common/common'
 // todo: Сделать темную тему
 export const CurrentWeatherDisplay: FC<ICurrentWeatherDisplayProps> = ({ data }) => {
     const metrics = useAppStore((state) => state.metrics)
-    // const theme = useAppStore((state) => state.theme)
     const date = new Date(data.dt * 1000)
     return (
         <div className="current-display">

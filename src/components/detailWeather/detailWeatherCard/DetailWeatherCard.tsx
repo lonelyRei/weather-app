@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { IFiveDaysListElement } from '../../../API/types'
 import { DateIntervals } from '../DetailWeather'
-import { getCelsius, getCorrectPressure } from '../../../common/common'
+import { getCelsius, getCorrectPressure, getRuDate, getRuTime, getWeekdayByMilliseconds } from '../../../common/common'
 import useAppStore, { appMetrics } from '../../../stores/appStore'
 import './detailWeatherCard.css'
 
@@ -73,18 +73,6 @@ export const DetailWeatherCard: FC<IDetailWeatherCardProps> = ({ data, interval,
             </div>
         )
     }
-}
-
-const getRuDate = (date: string) => {
-    return date.split(' ')[0].split('-').slice(1, 3).reverse().join('.')
-}
-
-const getRuTime = (time: string) => {
-    return time.split(' ')[1].split(':').slice(0, 2).join(':')
-}
-
-const getWeekdayByMilliseconds = (country: string, date: number) => {
-    return new Date(date * 1000).toLocaleString(country, { weekday: 'long' })
 }
 
 interface IDetailWeatherCardProps {
