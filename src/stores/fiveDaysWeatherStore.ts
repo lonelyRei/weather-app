@@ -1,6 +1,5 @@
 import { create } from 'zustand'
 import { IFiveDaysResponse } from '../API/types'
-import { persist } from 'zustand/middleware'
 
 interface IFiveDaysStore {
     isLoading: boolean
