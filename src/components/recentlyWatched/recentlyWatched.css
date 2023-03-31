@@ -54,3 +54,9 @@
 .app-dark .recently-watched .slick-arrow {
     color: white !important;
 }
+
+@media screen and (max-width: 768px) {
+    .recently-watched__title {
+        font-size: 24px;
+    }
+}
