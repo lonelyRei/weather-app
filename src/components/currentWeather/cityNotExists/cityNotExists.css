@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 500px;
 }
 .city-not-exists__text {
     color: white;
@@ -14,3 +15,18 @@
     font-weight: 500;
     margin-bottom: 35px;
 }
+
+@media screen and (max-width: 768px) {
+    .city-not-exists .input-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .city-not-exists .input-area input {
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+}
+

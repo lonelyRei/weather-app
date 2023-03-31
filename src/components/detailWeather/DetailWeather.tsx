@@ -20,6 +20,7 @@ export enum TimeToSortEnum {
     zero = '00:00',
 }
 
+// TODO: Доработать логику container
 export const DetailWeather: FC = () => {
     const [dateInterval, setDateInterval] = useState<DateIntervals>(DateIntervals.today)
     const [timeToSort, setTimeToSort] = useState<TimeToSortEnum>(TimeToSortEnum.fifteen)
@@ -30,10 +31,15 @@ export const DetailWeather: FC = () => {
 
     return (
         <div className="detail-display">
+            <div className="container">
+                <h3 className="detail-display__title">Детальный обзор погоды</h3>
+            </div>
             {isLoading ? (
                 <Spin size={'large'} />
             ) : isError ? (
-                <></>
+                <div className="container">
+                    <span className="detail-display__error">Произошла ошибка загрузки данных погоды :(</span>
+                </div>
             ) : data ? (
                 <div className="detail-display-info">
                     <DateToggler

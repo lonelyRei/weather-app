@@ -5,7 +5,6 @@ import { useCurrentWeatherStore } from '../../stores/currentWeatherStore'
 import { Spin } from 'antd'
 import { CurrentWeatherDisplay } from './currentWeatherDisplay/CurrentWeatherDisplay'
 import { CustomError } from '../UI/customError/CustomError'
-import { CityInput } from '../cityInput/CityInput'
 
 const errorText: string = 'Не удалось получить данные о населенном пункте, попробуйте ввести данные снова.'
 export const CurrentWeather: FC = () => {
@@ -20,7 +19,7 @@ export const CurrentWeather: FC = () => {
                         <Spin size={'large'} />
                     ) : isError ? (
                         <>
-                            <CustomError errorText={errorText} children={<CityInput />} />
+                            <CustomError errorText={errorText} />
                             <CityNotExists />
                         </>
                     ) : data ? (

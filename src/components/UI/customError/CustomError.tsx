@@ -1,11 +1,14 @@
 import { FC, ReactNode, useState } from 'react'
 import './customError.css'
 
-// todo: Сделать отключение скрола и адаптив
+// todo: Сделать отключение скрола
 export const CustomError: FC<ICustomError> = ({ errorText, children }) => {
     const [isVisible, setIsVisible] = useState<boolean>(true)
     return (
-        <div className="custom-error" style={{ display: isVisible ? 'flex' : 'none' }}>
+        <div
+            className={'custom-error' + (isVisible ? ' visible' : '')}
+            style={{ display: isVisible ? 'flex' : 'none' }}
+        >
             <div className="custom-error__outer">
                 <span onClick={() => setIsVisible(false)} className="custom-error__close">
                     X
