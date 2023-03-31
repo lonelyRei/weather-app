@@ -8,7 +8,7 @@ class CoordinatesAPI {
     // Метод получения координат населенного пункта по его названию
     public static async getCoordinatesOfCity(city: string): Promise<ICoordinatesResponse> {
         const response = await fetch(
-            `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${this.API_key}`
+            `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${this.API_key}`
         )
         return (await response.json())[0]
     }

@@ -19,7 +19,7 @@ class WeatherAPI {
     public static async getFiveDaysWeather(city: string): Promise<IFiveDaysResponse> {
         const coordinatesData: ICoordinatesResponse = await CoordinatesAPI.getCoordinatesOfCity(city)
         const response = await fetch(
-            `http://api.openweathermap.org/data/2.5/forecast?lat=${coordinatesData.lat}&lon=${coordinatesData.lon}&appid=${this.API_key}&lang=ru`
+            `https://api.openweathermap.org/data/2.5/forecast?lat=${coordinatesData.lat}&lon=${coordinatesData.lon}&appid=${this.API_key}&lang=ru`
         )
 
         return response.json()
